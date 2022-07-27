@@ -137,8 +137,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                         // create new element if ID does not yet exist
                         if (newNode == _nodes.end())
                         {
-                            std::cout << "hello" << std::endl;
-                            //_nodes.emplace_back(new GraphNode(id));
+                            // _nodes.emplace_back(new GraphNode(id));
                             _nodes.emplace_back(std::make_unique<GraphNode>(id));
                             newNode = _nodes.end() - 1; // get iterator to last element
 
@@ -227,7 +226,6 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     }
 
     // Add a local chatbot instance with constructor
-    std::cout << "This is where I'm doing constructor" << std::endl;
     ChatBot bot(ChatBot("../images/chatbot.png"));
 
     // add pointer to this instance of chatLogic for the chatbot

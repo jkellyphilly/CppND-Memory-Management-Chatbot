@@ -4,7 +4,6 @@
 
 GraphNode::GraphNode(int id)
 {
-    std::cout << "instantiating" << std::endl;
     _id = id;
 }
 
