@@ -50,7 +50,10 @@ ChatBot::ChatBot(const ChatBot &source)
 {
     std::cout << "ChatBot Copy Constructor" << std::endl;
     
+    // Perform a deep copy of the image type!
+    _image = new wxBitmap();
     _image = source._image;
+    
     _rootNode = source._rootNode;
 
     // Need to set the chatLogic handle to this instance
@@ -69,7 +72,10 @@ ChatBot& ChatBot::operator=(const ChatBot &source)
         return *this;
     }
 
+    // Perform a deep copy of the image type!
+    _image = new wxBitmap();
     _image = source._image;
+
     _rootNode = source._rootNode;
 
     // Need to set the chatLogic handle to this instance
